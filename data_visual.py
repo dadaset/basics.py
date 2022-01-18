@@ -13,7 +13,7 @@ plt.show()
 plt.clf()
 
 #----------------Build a histogram (3): compare
-# Histogram of life_exp, 15 bins   TIP!!! If you wanna to have both graphics at the same time, don't run plt.clf()
+# Histogram of life_exp, 15 bins   TIP!!! If you wanna have both graphics at the same time, don't run plt.clf()
 plt.hist(life_exp, bins = 15)
 
 # Show and clear plot
