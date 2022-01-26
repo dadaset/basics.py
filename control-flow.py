@@ -1,4 +1,4 @@
-#    TYPICAL LOOP
+#    TYPICAL CONTROL
 
 # Define variables
 room = "bed"
