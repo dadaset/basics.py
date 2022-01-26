@@ -77,5 +77,25 @@ car_maniac = cars[many_cars]
 # Print car_maniac
 print(car_maniac)
 
+#Remember about np.logical_and(), np.logical_or() and np.logical_not(), the NumPy variants of the and, or and not operators? 
+#You can also use them on Pandas Series to do more advanced filtering operations.
+
+###   INSTRUCTIONS
+#Use the code sample provided to create a DataFrame medium, that includes all the observations of cars that have a cars_per_cap between 100 and 500.
+#Print out medium.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Import numpy, you'll need this
+import numpy as np
+
+# Create medium: observations with cars_per_cap between 100 and 500
+medium =  cars[np.logical_and(cars['cars_per_cap']>100, cars['cars_per_cap']<500)]
+
+# Print medium
+print(medium)
+
 
 
