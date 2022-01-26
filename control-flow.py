@@ -19,3 +19,75 @@ elif area > 10 :
     print("medium size, nice!")
 else :
     print("pretty small.")
+    
+#_____________________________ WHILE LOOP ____________________________________#
+
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset<0 : 
+      offset = offset +1
+    else : 
+      offset = offset -1   
+    print(offset) 
+#___________________________ FOR LOOP _______________________________________#
+
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Change for loop to use enumerate() and update print()
+for index, area in enumerate(areas) :
+    print("room " + str(index) + ": " + str(area))
+
+   
+# house list of lists
+house = [["hallway", 11.25], 
+         ["kitchen", 18.0], 
+         ["living room", 20.0], 
+         ["bedroom", 10.75], 
+         ["bathroom", 9.50]]
+         
+# Build a for loop from scratch
+
+for x in house:
+    print("the "+ x[0] + " is " + str(x[1]) + " sqm")
+    
+#___________________________ LOOP OVER A DICTIONARY___________________________________#
+# Definition of dictionary
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
+          'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'austria':'vienna' }
+          
+# Iterate over europe
+#In Python 3, you need the items() method to loop over a dictionary: 
+
+for c,k in europe.items() :
+    print("the capital of "+ str(c) + " is " + str(k)) 
+    
+    #<script.py> output:
+    
+    #the capital of spain is madrid
+    #the capital of france is paris
+    #the capital of germany is berlin
+    #the capital of norway is oslo
+    #the capital of italy is rome
+    #the capital of poland is warsaw
+    #the capital of austria is vienna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
