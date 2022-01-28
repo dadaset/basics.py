@@ -102,9 +102,45 @@ for x in np.nditer(np_baseball) :
     
 #___________________________ LOOP OVER A DATAFRAME___________________________________#
 
+#cars:   
+#      cars_per_cap        country  drives_right
+#US            809  United States          True
+#AUS           731      Australia         False
+#JPN           588          Japan         False
+#IN             18          India         False
+#RU            200         Russia          True
+#MOR            70        Morocco          True
+#EG             45          Egypt          True
 
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
 
+# Iterate over rows of cars
+for lab, row in cars.iterrows():
+    print(str(lab))
+    print(row)
 
+#concatenate labels and a specific column 
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+for lab, row in cars.iterrows() :
+    print(str(lab) +": " + str(row['cars_per_cap']))
+    
+#___________________________USING A FOR LOOP TO ADD A COLUMN TO A DATAFRAME_______________________________#
+    
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Code for loop that adds COUNTRY column
+for lab, row in cars.iterrows() :
+    cars.loc[lab, "COUNTRY"] = row["country"].upper()
+    
+# Print cars
+print(cars)
 
 
 
